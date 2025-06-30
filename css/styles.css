@@ -122,3 +122,28 @@ body.acceso-aceptado {
   background: radial-gradient(circle at center, #002244, #000010);
   transition: background 1s ease;
 }
+
+.error-msg {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-top: 10px;
+  text-shadow: 0 0 6px #ff0000;
+  animation: glow-denied 0.5s ease;
+}
+
+@keyframes glow-denied {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+#loginForm.denied {
+  animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-5px); }
+  40% { transform: translateX(5px); }
+  60% { transform: translateX(-5px); }
+  80% { transform: translateX(5px); }
+}

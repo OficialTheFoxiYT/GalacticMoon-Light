@@ -1,7 +1,7 @@
 * styles.css */
 
 body.login-body {
-  background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+  background: linear-gradient(135deg, #001533, #2d004d);
   font-family: 'Orbitron', sans-serif;
   color: white;
   display: flex;
@@ -9,6 +9,15 @@ body.login-body {
   align-items: center;
   height: 100vh;
   margin: 0;
+}
+
+h2 {
+  color: #00fff2;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  text-shadow: 0 0 5px #00fff2, 0 0 10px #0ff;
+  margin-bottom: 20px;
 }
 
 .login-container {

@@ -1,46 +1,44 @@
-body.login-body {
-  background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
-  font-family: 'Orbitron', sans-serif;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.login-container {
-  background-color: #1a1a1a;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 0 20px #0ff;
-  text-align: center;
-  width: 300px;
-  animation: fadeIn 1.5s ease;
-}
-
-.logo {
-  height: 80px;
-  margin-bottom: 10px;
-}
-
-.input-group {
-  background-color: #333;
-  margin: 15px 0;
-  padding: 10px;
-  border-radius: 8px;
-}
-
 .login-btn-neon {
-  background: linear-gradient(90deg, #00f0ff, #0fffc1);
-  color: #000;
-  font-weight: bold;
-  border: none;
-  padding: 12px 25px;
-  font-size: 16px;
-  border-radius: 12px;
+  position: relative;
+  display: inline-block;
+  padding: 14px 32px;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #00fff2;
+  text-transform: uppercase;
+  background-color: #111;
+  border: 2px solid #00fff2;
+  border-radius: 14px;
   cursor: pointer;
-  transition: all 0.4s ease;
-  box-shadow: 0 0 15px #0ff, 0 0 30px #0ff4, 0 0 45px #0ff2;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 0 12px #0ff, 0 0 24px #00ffe5;
+  transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.login-btn-neon::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, transparent 0%, #00fff2 25%, #0ff 50%, #00fff2 75%, transparent 100%);
+  animation: glow-spin 4s linear infinite;
+  filter: blur(15px);
+  z-index: -1;
+}
+
+.login-btn-neon:hover {
+  color: #000;
+  background-color: #00fff2;
+  box-shadow: 0 0 20px #0ff, 0 0 40px #00ffe5;
+  transform: scale(1.07);
+}
+
+@keyframes glow-spin {
+  to { transform: rotate(360deg); }
 }
 
 .login-btn-neon:hover {

@@ -1,4 +1,4 @@
-/* styles.css */
+* styles.css */
 
 body.login-body {
   background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
@@ -22,4 +22,75 @@ body.login-body {
 }
 
 @keyframes fadeIn {
-  from { opacity
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.logo {
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.input-group {
+  background-color: #333;
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 0 10px #00fff220;
+}
+
+.input-group input {
+  background: none;
+  border: none;
+  outline: none;
+  color: #0ff;
+  font-size: 14px;
+  width: 100%;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.login-btn-neon {
+  position: relative;
+  display: inline-block;
+  padding: 14px 32px;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #00fff2;
+  text-transform: uppercase;
+  background-color: #111;
+  border: 2px solid #00fff2;
+  border-radius: 14px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 0 12px #0ff, 0 0 24px #00ffe5;
+  transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.login-btn-neon::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, transparent 0%, #00fff2 25%, #0ff 50%, #00fff2 75%, transparent 100%);
+  animation: glow-spin 4s linear infinite;
+  filter: blur(15px);
+  z-index: -1;
+}
+
+@keyframes glow-spin {
+  to { transform: rotate(360deg); }
+}
+
+.login-btn-neon:hover {
+  color: #000;
+  background-color: #00fff2;
+  box-shadow: 0 0 20px #0ff, 0 0 40px #00ffe5;
+  transform: scale(1.07);
+}

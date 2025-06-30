@@ -1,1 +1,78 @@
+body.dashboard {
+  background: linear-gradient(135deg, #160020, #0d001a);
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+header {
+  text-align: center;
+  padding: 30px 10px;
+}
+
+header h1 {
+  font-size: 30px;
+  color: #00ffee;
+  text-shadow: 0 0 8px #0ff, 0 0 16px #00ffee;
+}
+
+.welcome {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.modules {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+  width: 100%;
+  max-width: 1000px;
+  box-sizing: border-box;
+}
+
+.module {
+  background-color: #1a1a2b;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px #00fff222;
+  text-align: center;
+  font-size: 16px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.module:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 20px #00fff2cc;
+}
+
+.module.danger {
+  background-color: #330000;
+  color: #ff4444;
+  box-shadow: 0 0 10px #ff444422;
+}
+
+footer {
+  margin: 40px 0;
+}
+
+footer button {
+  background: #222;
+  color: #00fff2;
+  border: 1px solid #00fff2;
+  padding: 12px 24px;
+  font-size: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+footer button:hover {
+  background: #00fff2;
+  color: #000;
+}

@@ -1,4 +1,4 @@
-* styles.css */
+/* styles.css */
 
 body.login-body {
   background: linear-gradient(135deg, #001533, #2d004d);
@@ -33,11 +33,6 @@ h2 {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-20px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-.logo {
-  height: 80px;
-  margin-bottom: 10px;
 }
 
 .input-group {

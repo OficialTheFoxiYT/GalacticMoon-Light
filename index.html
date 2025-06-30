@@ -1,18 +1,25 @@
 
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Login - GDPS Staff</title>
+  <title>Login | GDPS Staff</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
 </head>
-<body>
+<body class="login-body">
   <div class="login-container">
-    <h2>Login GDPS Staff</h2>
+    <img src="assets/logo.png" alt="Logo GDPS" class="logo" />
+    <h2>GML Staff Login</h2>
     <form id="loginForm">
-      <input type="text" id="u" placeholder="Usuario" required />
-      <input type="password" id="p" placeholder="Contraseña" required />
-      <button type="submit">Entrar</button>
+      <div class="input-group">
+        <span>👤</span><input type="text" id="u" placeholder="Usuario" required />
+      </div>
+      <div class="input-group">
+        <span>🔒</span><input type="password" id="p" placeholder="Contraseña" required />
+      </div>
+      <button class="login-btn" type="submit">Entrar</button>
     </form>
   </div>
   <script src="js/auth.js"></script>

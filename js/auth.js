@@ -4,31 +4,26 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
   const username = document.getElementById('u').value.trim();
   const password = document.getElementById('p').value;
 
-  // Lista de usuarios autorizados
-  const allowedUsers = {
-    "admin": "secreto123",
-    "foxito": "galaxy2025",
-    "staff01": "orbitalAccess"
-  };
+  // Buscamos al usuario dentro del array 'users' que viene de users.js
+  const user = users.find(u => u.username === username && u.password === password);
 
-  // Validación
-  if (allowedUsers[username] === password) {
-    accesoExitoso();
+  if (user) {
+    accesoExitoso(user.role); // Le pasamos el rol
   } else {
     accesoDenegado();
   }
 });
 
-function accesoExitoso() {
+function accesoExitoso(rol) {
   const container = document.querySelector('.login-container');
   container.innerHTML = `
     <h2 class="success-msg">✅ Acceso autorizado</h2>
-    <p class="entrada">Bienvenido al sistema, tripulante.</p>
+    <p class="entrada">Bienvenido, rango <strong>${rol.toUpperCase()}</strong>.</p>
   `;
-
-  document.body.classList.add('acceso-aceptado');
+  document.body.classList.add(rol); // Aplicamos la clase visual para el fondo
 }
 
 function accesoDenegado() {
   alert('Acceso denegado. Verificá tus credenciales.');
 }
+

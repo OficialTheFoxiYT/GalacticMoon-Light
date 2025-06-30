@@ -1,18 +1,20 @@
 document.getElementById('loginForm').addEventListener('submit', function (e) {
-  e.preventDefault(); // Evita recargar la página
+  e.preventDefault();
 
   const username = document.getElementById('u').value.trim();
   const password = document.getElementById('p').value;
 
-  // Buscamos al usuario dentro del array 'users' que viene de users.js
   const user = users.find(u => u.username === username && u.password === password);
 
   if (user) {
-    accesoExitoso(user.role); // Le pasamos el rol
+    localStorage.setItem('rol', user.role);   // Guardamos rol
+    localStorage.setItem('usuario', user.username); // Guardamos nombre
+    window.location.href = 'dashboard.html';  // Redireccionamos al panel
   } else {
     accesoDenegado();
   }
 });
+
 
 function accesoExitoso(rol) {
   const container = document.querySelector('.login-container');

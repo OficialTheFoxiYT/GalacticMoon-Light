@@ -1,18 +1,32 @@
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #121212;
+body.login-body {
+  background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+  font-family: 'Orbitron', sans-serif;
   color: white;
-  padding: 20px;
-}
-header {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 10px;
+  height: 100vh;
 }
-.panel {
-  margin-top: 20px;
+
+.login-container {
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #0ff;
+  text-align: center;
+  width: 300px;
+  animation: fadeIn 1.5s ease;
+}
+
+.logo {
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.input-group {
+  background-color: #333;
+  margin: 15px 0;
   padding: 10px;
-  background-color: #1f1f1f;
-  border-left: 4px solid cyan;
-}
+  border-radius: 8px;
+  display: flex;
+  align-items: cent

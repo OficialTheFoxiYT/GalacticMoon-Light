@@ -24,5 +24,23 @@ function accesoExitoso(rol) {
 }
 
 function accesoDenegado() {
-  alert('Acceso denegado. Verificá tus credenciales.');
+  const form = document.getElementById('loginForm');
+
+  // Si ya hay mensaje, eliminá para evitar duplicación
+  const existingError = document.querySelector('.error-msg');
+  if (existingError) existingError.remove();
+
+  // Crear mensaje de error
+  const error = document.createElement('p');
+  error.classList.add('error-msg');
+  error.innerHTML = '❌ <strong>Acceso denegado:</strong> Verificá tus credenciales.';
+  form.appendChild(error);
+
+  // Aplicar clase de animación
+  form.classList.add('denied');
+
+  // Remover clase animada después de 500ms
+  setTimeout(() => {
+    form.classList.remove('denied');
+  }, 500);
 }

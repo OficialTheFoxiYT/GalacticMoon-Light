@@ -26,4 +26,3 @@ function accesoExitoso(rol) {
 function accesoDenegado() {
   alert('Acceso denegado. Verificá tus credenciales.');
 }
-
